@@ -1,0 +1,22 @@
+{
+  "name": "food",
+  "version": "1.0.0",
+  "description": "Всем привет!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sati-prog/10_Food.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sati-prog/10_Food/issues"
+  },
+  "homepage": "https://github.com/Sati-prog/10_Food#readme",
+  "devDependencies": {
+    "json-server": "^0.17.0"
+  }
+}
