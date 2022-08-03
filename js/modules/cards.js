@@ -1,3 +1,5 @@
+import {getResource} from '../services/services';
+
 function cards() {
 
     // Использую классы для карточек
@@ -43,27 +45,15 @@ function cards() {
         }
     }
 
-    const getResource = async (url) => {
-
-        const res = await fetch(url);
-
-        if (!res.ok) {
-
-            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
-        }
-
-        return await res.json();
-    };
-
     // first option
     getResource('http://localhost:3000/menu')
-        .then(data => {
+    .then(data => {
 
-            data.forEach(({img, altimg, title, descr, price}) => {
+        data.forEach(({img, altimg, title, descr, price}) => {
 
-                new MenuCard(img, altimg, title, descr, price, '.menu .container').render();
-            });
+            new MenuCard(img, altimg, title, descr, price, '.menu .container').render();
         });
+    });
 
     // second option
     // getResource('http://localhost:3000/menu')
@@ -93,4 +83,4 @@ function cards() {
     // }
 }
 
-module.exports = cards;
+export default cards;
